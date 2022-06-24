@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 from constants import (
     KILL_LINE_PATTERN,
@@ -14,10 +15,10 @@ GAME = {
 }
 
 
-def get_all_kill_lines(file):
+def get_all_kill_lines(file_name):
     regex = re.compile(KILL_LINE_PATTERN)
-    with open(os.path.join("..", "data", file), "r") as file:
-        return [line for line in file.readlines() if regex.match(line.strip())]
+    with open(os.path.join("data", file_name), "r") as f:
+        return [line for line in f.readlines() if regex.match(line.strip())]
 
 
 def get_death_data(kill_line):
@@ -51,8 +52,8 @@ def set_mean(mean):
         GAME["kills_by_means"][mean] = 1
 
 
-def generate_group_information(file):
-    kill_lines = get_all_kill_lines(file)
+def generate_group_information(file_name):
+    kill_lines = get_all_kill_lines(file_name)
 
     for kill_line in kill_lines:
         increase_total_kills()
@@ -63,4 +64,6 @@ def generate_group_information(file):
     print(GAME)
 
 
-generate_group_information("log_1.txt")
+if __name__ == "__main__":
+    file = sys.argv[-1]
+    generate_group_information(file)
