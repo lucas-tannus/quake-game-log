@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import sys
@@ -52,6 +53,11 @@ def set_mean(mean):
         GAME["kills_by_means"][mean] = 1
 
 
+def save_result():
+    with open(os.path.join("data", "result.txt"), "w") as f:
+        f.write(json.dumps(GAME, indent=4))
+
+
 def generate_group_information(file_name):
     kill_lines = get_all_kill_lines(file_name)
 
@@ -61,7 +67,8 @@ def generate_group_information(file_name):
         add_players([killer, victim])
         set_kill(killer, victim)
         set_mean(mean)
-    print(GAME)
+
+    save_result()
 
 
 if __name__ == "__main__":
