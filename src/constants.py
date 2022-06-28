@@ -7,3 +7,4 @@ WORLD_PLAYER = "<world>"
 class LogConstants:
     INFO = "info"
     WARN = "warn"
+    ERROR = "error"
