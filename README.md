@@ -8,7 +8,7 @@ This project has been created using a simple stack based on:
  - Python 3.9.11
 
 ## Getting Started
-In this section we're going to describe the setup needed on your local machine in order to run the solution.
+In this section we're going to describe the setup needed on your local machine in order to run the script.
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ In this section we're going to describe the setup needed on your local machine i
   ```sh
   cd quake-game-log
   ```
-5. To run the solution.
+5. To run the script.
   ```sh
   make run
   ```
