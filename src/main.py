@@ -90,16 +90,16 @@ def create_games_grouped_information(file_name):
                 set_meaning(meaning)
 
 
-def show_result():
+def show_result():  # pragma: no cover
     print(GAMES)
 
 
-def save_result():
+def save_result():  # pragma: no cover
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "result.txt"), "w") as f:
         f.write(json.dumps(GAMES, indent=4))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     file = sys.argv[-1]
     create_games_grouped_information(file)
     show_result()
