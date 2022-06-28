@@ -5,4 +5,4 @@ install:
 	pip install -r ./requirements.txt
 
 tests: install
-	python -m pytest --cov-report html --cov=src tests/
+	python -m pytest --cov-report term --cov=src tests/
