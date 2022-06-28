@@ -31,7 +31,7 @@ In this section we're going to describe the setup needed on your local machine i
   make run
   ```
 #### Result
-By runnig the `make run` a new file called `result.txt` is going to be created inside `quake-game-log/data` folder having the solution.
+By running the `make run` a new file called `result.txt` is going to be created inside `quake-game-log/data` folder having the solution.
 
 > :warning: **In case of happen any error**: All will be logged inside `quake-game-log/data/logs`
 
