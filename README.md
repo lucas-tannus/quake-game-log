@@ -28,8 +28,10 @@ In this section we're going to describe the setup needed on your local machine i
   ```
 5. To run the script.
   ```sh
-  make run
+  make run file={file_name}
   ```
+The **file_name** should be a file that it's inside the `quake-game-log/data` folder, e.g. log_1.txt
+  
 #### Result
 By running the `make run` a new file called `result.txt` is going to be created inside `quake-game-log/data` folder having the solution.
 
