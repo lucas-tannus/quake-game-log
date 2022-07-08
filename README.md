@@ -38,7 +38,7 @@ By running the `make run` a new file called `result.txt` is going to be created 
 > :warning: **In case of happen any error**: All will be logged inside `quake-game-log/data/logs`
 
 ### Testing
-In onder to run the unit tests and generate coverage report.
+In order to run the unit tests and generate coverage report.
   ```sh
   make tests
   ```
